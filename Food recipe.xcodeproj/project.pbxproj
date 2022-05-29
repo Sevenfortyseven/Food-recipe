@@ -13,9 +13,13 @@
 		9F392BED2842491800F706AF /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BEC2842491800F706AF /* Images.swift */; };
 		9F392BEF284249B600F706AF /* InitialVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BEE284249B600F706AF /* InitialVM.swift */; };
 		9F392BF32842516F00F706AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BF22842516F00F706AF /* Constants.swift */; };
-		9F392BF52842535500F706AF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BF42842535500F706AF /* LoginView.swift */; };
+		9F392BF52842535500F706AF /* LoginInputModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BF42842535500F706AF /* LoginInputModule.swift */; };
 		9F392BF72842543100F706AF /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BF62842543100F706AF /* UIFont+.swift */; };
 		9F392BFA284261EE00F706AF /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BF9284261EE00F706AF /* UIView+.swift */; };
+		9F392BFF284269CD00F706AF /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BFE284269CD00F706AF /* Checkbox.swift */; };
+		9F58A4342843CE2800A1509B /* SignInModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A4332843CE2800A1509B /* SignInModule.swift */; };
+		9F58A4362843DB4700A1509B /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A4352843DB4700A1509B /* UIButton+.swift */; };
+		9F58A4382843ED7700A1509B /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A4372843ED7700A1509B /* SignUpModule.swift */; };
 		9F76AE80283A5390005E7ED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76AE7F283A5390005E7ED9 /* AppDelegate.swift */; };
 		9F76AE82283A5390005E7ED9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76AE81283A5390005E7ED9 /* SceneDelegate.swift */; };
 		9F76AE84283A5390005E7ED9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76AE83283A5390005E7ED9 /* HomeVC.swift */; };
@@ -67,9 +71,13 @@
 		9F392BEC2842491800F706AF /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		9F392BEE284249B600F706AF /* InitialVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVM.swift; sourceTree = "<group>"; };
 		9F392BF22842516F00F706AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		9F392BF42842535500F706AF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9F392BF42842535500F706AF /* LoginInputModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputModule.swift; sourceTree = "<group>"; };
 		9F392BF62842543100F706AF /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		9F392BF9284261EE00F706AF /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		9F392BFE284269CD00F706AF /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		9F58A4332843CE2800A1509B /* SignInModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModule.swift; sourceTree = "<group>"; };
+		9F58A4352843DB4700A1509B /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		9F58A4372843ED7700A1509B /* SignUpModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModule.swift; sourceTree = "<group>"; };
 		9F76AE7C283A5390005E7ED9 /* Food recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food recipe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F76AE7F283A5390005E7ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F76AE81283A5390005E7ED9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,7 +141,9 @@
 		9F392BE42842406500F706AF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9F392BF42842535500F706AF /* LoginView.swift */,
+				9F392BF42842535500F706AF /* LoginInputModule.swift */,
+				9F58A4332843CE2800A1509B /* SignInModule.swift */,
+				9F58A4372843ED7700A1509B /* SignUpModule.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +173,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9F392BFD284269BC00F706AF /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				9F392BFE284269CD00F706AF /* Checkbox.swift */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
 		9F76AE73283A5390005E7ED9 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +202,7 @@
 		9F76AE7E283A5390005E7ED9 /* Food recipe */ = {
 			isa = PBXGroup;
 			children = (
+				9F392BFD284269BC00F706AF /* CustomComponents */,
 				9F392BEB2842490700F706AF /* Supporting Files */,
 				9F392BE8284240F800F706AF /* Resources */,
 				9F76AEC8283BA7B3005E7ED9 /* Extensions */,
@@ -317,6 +336,7 @@
 				9F392BE9284241FE00F706AF /* UIColor+.swift */,
 				9F392BF62842543100F706AF /* UIFont+.swift */,
 				9F392BF9284261EE00F706AF /* UIView+.swift */,
+				9F58A4352843DB4700A1509B /* UIButton+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -502,6 +522,8 @@
 				9F76AEC2283AFC5E005E7ED9 /* RequestMethod.swift in Sources */,
 				9F76AE80283A5390005E7ED9 /* AppDelegate.swift in Sources */,
 				9F76AEC7283B98A6005E7ED9 /* NetworkEngine.swift in Sources */,
+				9F392BFF284269CD00F706AF /* Checkbox.swift in Sources */,
+				9F58A4362843DB4700A1509B /* UIButton+.swift in Sources */,
 				9F76AED7283C0268005E7ED9 /* RecipesEndpoint.swift in Sources */,
 				9F392BED2842491800F706AF /* Images.swift in Sources */,
 				9F76AE97283A7D1E005E7ED9 /* FoodRecipe.xcdatamodeld in Sources */,
@@ -509,14 +531,16 @@
 				9F76AEE3283C13C6005E7ED9 /* Measure.swift in Sources */,
 				9F76AEC4283AFCAD005E7ED9 /* RequestError.swift in Sources */,
 				9F392BEA284241FE00F706AF /* UIColor+.swift in Sources */,
-				9F392BF52842535500F706AF /* LoginView.swift in Sources */,
+				9F392BF52842535500F706AF /* LoginInputModule.swift in Sources */,
 				9F76AED3283BF47D005E7ED9 /* Recipe.swift in Sources */,
 				9F76AE82283A5390005E7ED9 /* SceneDelegate.swift in Sources */,
 				9F392BFA284261EE00F706AF /* UIView+.swift in Sources */,
 				9F392BF72842543100F706AF /* UIFont+.swift in Sources */,
 				9F76AEE1283C0BB1005E7ED9 /* Length.swift in Sources */,
+				9F58A4342843CE2800A1509B /* SignInModule.swift in Sources */,
 				9F76AED9283C0844005E7ED9 /* AnalyzedInstruction.swift in Sources */,
 				9F76AEB4283A8F4D005E7ED9 /* FoodCollectionCell.swift in Sources */,
+				9F58A4382843ED7700A1509B /* SignUpModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +684,7 @@
 				INFOPLIST_FILE = "Food recipe/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -687,6 +712,7 @@
 				INFOPLIST_FILE = "Food recipe/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
