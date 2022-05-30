@@ -11,4 +11,5 @@ import Foundation
 enum ImageStore: String
 {
     case initialBackground = "initial_background"
+    case alt = "alt_background"
 }

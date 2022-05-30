@@ -18,8 +18,9 @@ final class Coordinator
     
     func start() {
         // Create initial VC
-        let initialVM = InitialViewModel()
-        let initialVC = InitialViewController(viewModel: initialVM)
+        let initialVM = AuthViewModel()
+        let initialVC = AuthViewController(viewModel: initialVM)
+        initialVC.delegate = self
         navigationController?.setViewControllers([initialVC], animated: false)
         
     }
@@ -32,4 +33,15 @@ extension Coordinator: HomeViewControllerDelegate
 {
     
     
+}
+
+extension Coordinator: AuthViewControllerDelegate
+{
+    func signUp() {
+        print("a")
+        let targetVM = SignUpViewModel()
+        let targetVC = SignUpViewController(viewModel: targetVM)
+        navigationController?.present(targetVC, animated: true)
+    }
+
 }

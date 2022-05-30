@@ -11,7 +11,8 @@ struct Constants
 {
     
     public static var modulePadding: CGFloat = 20
-    
+    public static var paddingTop: CGFloat = 15
+    public static var paddingBot: CGFloat = -15
     
     struct Title {
         

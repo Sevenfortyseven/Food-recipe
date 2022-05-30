@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		373D595D3CD5635107AA29AA /* Pods_Food_recipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BAD0FBEAE11A4F7CBC4190E /* Pods_Food_recipe.framework */; };
-		9F392BE72842407500F706AF /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BE62842407500F706AF /* InitialVC.swift */; };
+		9F392BE72842407500F706AF /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BE62842407500F706AF /* AuthVC.swift */; };
 		9F392BEA284241FE00F706AF /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BE9284241FE00F706AF /* UIColor+.swift */; };
 		9F392BED2842491800F706AF /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BEC2842491800F706AF /* Images.swift */; };
-		9F392BEF284249B600F706AF /* InitialVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BEE284249B600F706AF /* InitialVM.swift */; };
+		9F392BEF284249B600F706AF /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BEE284249B600F706AF /* AuthVM.swift */; };
 		9F392BF32842516F00F706AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BF22842516F00F706AF /* Constants.swift */; };
 		9F392BF52842535500F706AF /* LoginInputModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BF42842535500F706AF /* LoginInputModule.swift */; };
 		9F392BF72842543100F706AF /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F392BF62842543100F706AF /* UIFont+.swift */; };
@@ -20,6 +20,12 @@
 		9F58A4342843CE2800A1509B /* SignInModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A4332843CE2800A1509B /* SignInModule.swift */; };
 		9F58A4362843DB4700A1509B /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A4352843DB4700A1509B /* UIButton+.swift */; };
 		9F58A4382843ED7700A1509B /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A4372843ED7700A1509B /* SignUpModule.swift */; };
+		9F58A43A2844D27900A1509B /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A4392844D27900A1509B /* String+.swift */; };
+		9F58A43E2844E5E500A1509B /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A43D2844E5E500A1509B /* UIViewController+.swift */; };
+		9F58A4412844E88400A1509B /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A4402844E88400A1509B /* ObservableObject.swift */; };
+		9F58A44428450E1900A1509B /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A44328450E1900A1509B /* SignUpVC.swift */; };
+		9F58A44928450EB400A1509B /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A44828450EB400A1509B /* SignUpVM.swift */; };
+		9F58A44B28451FB700A1509B /* DetailsInputModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A44A28451FB700A1509B /* DetailsInputModule.swift */; };
 		9F76AE80283A5390005E7ED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76AE7F283A5390005E7ED9 /* AppDelegate.swift */; };
 		9F76AE82283A5390005E7ED9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76AE81283A5390005E7ED9 /* SceneDelegate.swift */; };
 		9F76AE84283A5390005E7ED9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76AE83283A5390005E7ED9 /* HomeVC.swift */; };
@@ -66,10 +72,10 @@
 		1AAA916F6457FECC4CED2B09 /* Pods-Food recipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food recipe.release.xcconfig"; path = "Target Support Files/Pods-Food recipe/Pods-Food recipe.release.xcconfig"; sourceTree = "<group>"; };
 		2BAD0FBEAE11A4F7CBC4190E /* Pods_Food_recipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_recipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FB3C3170E17B4A75923CA1 /* Pods-Food recipe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food recipe.debug.xcconfig"; path = "Target Support Files/Pods-Food recipe/Pods-Food recipe.debug.xcconfig"; sourceTree = "<group>"; };
-		9F392BE62842407500F706AF /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
+		9F392BE62842407500F706AF /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		9F392BE9284241FE00F706AF /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		9F392BEC2842491800F706AF /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		9F392BEE284249B600F706AF /* InitialVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVM.swift; sourceTree = "<group>"; };
+		9F392BEE284249B600F706AF /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
 		9F392BF22842516F00F706AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F392BF42842535500F706AF /* LoginInputModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputModule.swift; sourceTree = "<group>"; };
 		9F392BF62842543100F706AF /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
@@ -78,6 +84,12 @@
 		9F58A4332843CE2800A1509B /* SignInModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModule.swift; sourceTree = "<group>"; };
 		9F58A4352843DB4700A1509B /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		9F58A4372843ED7700A1509B /* SignUpModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModule.swift; sourceTree = "<group>"; };
+		9F58A4392844D27900A1509B /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		9F58A43D2844E5E500A1509B /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		9F58A4402844E88400A1509B /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		9F58A44328450E1900A1509B /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		9F58A44828450EB400A1509B /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
+		9F58A44A28451FB700A1509B /* DetailsInputModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInputModule.swift; sourceTree = "<group>"; };
 		9F76AE7C283A5390005E7ED9 /* Food recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food recipe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F76AE7F283A5390005E7ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F76AE81283A5390005E7ED9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,20 +132,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9F392BE22842403F00F706AF /* Initial */ = {
+		9F392BE22842403F00F706AF /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				9F392BE32842406000F706AF /* Controller */,
 				9F392BE52842406900F706AF /* ViewModel */,
 				9F392BE42842406500F706AF /* View */,
-				9F392BE32842406000F706AF /* Controller */,
 			);
-			path = Initial;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		9F392BE32842406000F706AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9F392BE62842407500F706AF /* InitialVC.swift */,
+				9F392BE62842407500F706AF /* AuthVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,7 +163,7 @@
 		9F392BE52842406900F706AF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9F392BEE284249B600F706AF /* InitialVM.swift */,
+				9F392BEE284249B600F706AF /* AuthVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -173,12 +185,46 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9F392BFD284269BC00F706AF /* CustomComponents */ = {
+		9F392BFD284269BC00F706AF /* CustomUIComponents */ = {
 			isa = PBXGroup;
 			children = (
 				9F392BFE284269CD00F706AF /* Checkbox.swift */,
 			);
-			path = CustomComponents;
+			path = CustomUIComponents;
+			sourceTree = "<group>";
+		};
+		9F58A44228450E0A00A1509B /* SignUP */ = {
+			isa = PBXGroup;
+			children = (
+				9F58A44528450E1E00A1509B /* Controller */,
+				9F58A44728450E2700A1509B /* ViewModel */,
+				9F58A44628450E2100A1509B /* View */,
+			);
+			path = SignUP;
+			sourceTree = "<group>";
+		};
+		9F58A44528450E1E00A1509B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F58A44328450E1900A1509B /* SignUpVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9F58A44628450E2100A1509B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F58A44A28451FB700A1509B /* DetailsInputModule.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F58A44728450E2700A1509B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F58A44828450EB400A1509B /* SignUpVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9F76AE73283A5390005E7ED9 = {
@@ -202,7 +248,6 @@
 		9F76AE7E283A5390005E7ED9 /* Food recipe */ = {
 			isa = PBXGroup;
 			children = (
-				9F392BFD284269BC00F706AF /* CustomComponents */,
 				9F392BEB2842490700F706AF /* Supporting Files */,
 				9F392BE8284240F800F706AF /* Resources */,
 				9F76AEC8283BA7B3005E7ED9 /* Extensions */,
@@ -239,7 +284,9 @@
 		9F76AEAA283A8C13005E7ED9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				9F392BE22842403F00F706AF /* Initial */,
+				9F392BFD284269BC00F706AF /* CustomUIComponents */,
+				9F392BE22842403F00F706AF /* Auth */,
+				9F58A44228450E0A00A1509B /* SignUP */,
 				9F76AEAB283A8C1B005E7ED9 /* Home */,
 			);
 			path = Scenes;
@@ -269,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				9F76AE93283A617E005E7ED9 /* Coordinator.swift */,
+				9F58A4402844E88400A1509B /* ObservableObject.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -337,6 +385,8 @@
 				9F392BF62842543100F706AF /* UIFont+.swift */,
 				9F392BF9284261EE00F706AF /* UIView+.swift */,
 				9F58A4352843DB4700A1509B /* UIButton+.swift */,
+				9F58A4392844D27900A1509B /* String+.swift */,
+				9F58A43D2844E5E500A1509B /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -508,21 +558,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F392BEF284249B600F706AF /* InitialVM.swift in Sources */,
+				9F392BEF284249B600F706AF /* AuthVM.swift in Sources */,
 				9F76AE94283A617E005E7ED9 /* Coordinator.swift in Sources */,
 				9F76AECD283BD0FC005E7ED9 /* RecipeService.swift in Sources */,
+				9F58A44B28451FB700A1509B /* DetailsInputModule.swift in Sources */,
 				9F76AEDD283C0AB6005E7ED9 /* Ingredient.swift in Sources */,
 				9F76AEDB283C09EF005E7ED9 /* Step.swift in Sources */,
 				9F76AED5283BF778005E7ED9 /* ExtendedIngredient.swift in Sources */,
 				9F76AE84283A5390005E7ED9 /* HomeVC.swift in Sources */,
 				9F392BF32842516F00F706AF /* Constants.swift in Sources */,
 				9F76AEB6283AC294005E7ED9 /* HomeVM.swift in Sources */,
-				9F392BE72842407500F706AF /* InitialVC.swift in Sources */,
+				9F392BE72842407500F706AF /* AuthVC.swift in Sources */,
+				9F58A43A2844D27900A1509B /* String+.swift in Sources */,
 				9F76AEBF283AE670005E7ED9 /* Endpoint.swift in Sources */,
 				9F76AEC2283AFC5E005E7ED9 /* RequestMethod.swift in Sources */,
+				9F58A43E2844E5E500A1509B /* UIViewController+.swift in Sources */,
 				9F76AE80283A5390005E7ED9 /* AppDelegate.swift in Sources */,
 				9F76AEC7283B98A6005E7ED9 /* NetworkEngine.swift in Sources */,
 				9F392BFF284269CD00F706AF /* Checkbox.swift in Sources */,
+				9F58A4412844E88400A1509B /* ObservableObject.swift in Sources */,
 				9F58A4362843DB4700A1509B /* UIButton+.swift in Sources */,
 				9F76AED7283C0268005E7ED9 /* RecipesEndpoint.swift in Sources */,
 				9F392BED2842491800F706AF /* Images.swift in Sources */,
@@ -531,11 +585,13 @@
 				9F76AEE3283C13C6005E7ED9 /* Measure.swift in Sources */,
 				9F76AEC4283AFCAD005E7ED9 /* RequestError.swift in Sources */,
 				9F392BEA284241FE00F706AF /* UIColor+.swift in Sources */,
+				9F58A44928450EB400A1509B /* SignUpVM.swift in Sources */,
 				9F392BF52842535500F706AF /* LoginInputModule.swift in Sources */,
 				9F76AED3283BF47D005E7ED9 /* Recipe.swift in Sources */,
 				9F76AE82283A5390005E7ED9 /* SceneDelegate.swift in Sources */,
 				9F392BFA284261EE00F706AF /* UIView+.swift in Sources */,
 				9F392BF72842543100F706AF /* UIFont+.swift in Sources */,
+				9F58A44428450E1900A1509B /* SignUpVC.swift in Sources */,
 				9F76AEE1283C0BB1005E7ED9 /* Length.swift in Sources */,
 				9F58A4342843CE2800A1509B /* SignInModule.swift in Sources */,
 				9F76AED9283C0844005E7ED9 /* AnalyzedInstruction.swift in Sources */,
