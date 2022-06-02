@@ -51,7 +51,7 @@ class SignUpModule: UIView
         return label
     }()
     
-    public let signUpButton: UIButton = {
+    private let signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.titleLabel?.textColor = .secondaryColor
         button.setTitle("Sign Up", for: .normal)

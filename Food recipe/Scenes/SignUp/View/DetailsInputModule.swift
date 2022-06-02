@@ -11,6 +11,8 @@ import UIKit
 class DetailsInputModule: UIView
 {
     
+    public var signUpAction: (() -> Void)?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -27,17 +29,28 @@ class DetailsInputModule: UIView
     
     private func addSubviews() {
         addSubview(Vstack)
+        Vstack.addArrangedSubview(usernameLabel)
+        Vstack.addArrangedSubview(usernameTextField)
         Vstack.addArrangedSubview(emailLabel)
         Vstack.addArrangedSubview(emailTextField)
         Vstack.addArrangedSubview(passwordLabel)
         Vstack.addArrangedSubview(passwordTextField)
         Vstack.addArrangedSubview(validatePasswordLabel)
         Vstack.addArrangedSubview(validatePasswordTextField)
+        addSubview(signUpButton)
     }
     
+    // MARK: -- Actions
+    
     private func addTargets() {
-        
+        signUpButton.addTarget(self, action: #selector(signUpButtonPressed), for: .touchUpInside)
     }
+    
+    @objc private func signUpButtonPressed() {
+        signUpAction?()
+    }
+    
+    // MARK: -- UI Elements
     
     private var Vstack: UIStackView = {
         let stack = UIStackView()
@@ -51,6 +64,14 @@ class DetailsInputModule: UIView
     private let emailLabel: UILabel = {
         let label = UILabel()
         label.text = "Email"
+        label.textColor = .textColor
+        label.font = .body
+        label.adjustsFontForContentSizeCategory = true
+        return label
+    }()
+    private let usernameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Username"
         label.textColor = .textColor
         label.font = .body
         label.adjustsFontForContentSizeCategory = true
@@ -84,6 +105,18 @@ class DetailsInputModule: UIView
         textField.adjustsFontForContentSizeCategory = true
         return textField
     }()
+    
+    public let usernameTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "username"
+        textField.backgroundColor = .white
+        textField.font = .body
+        textField.autocorrectionType = .no
+        textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
+        textField.adjustsFontForContentSizeCategory = true
+        return textField
+    }()
     public let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "password"
@@ -92,6 +125,7 @@ class DetailsInputModule: UIView
         textField.autocorrectionType = .no
         textField.borderStyle = .roundedRect
         textField.autocapitalizationType = .none
+        textField.isSecureTextEntry = true
         textField.adjustsFontForContentSizeCategory = true
         return textField
     }()
@@ -103,14 +137,26 @@ class DetailsInputModule: UIView
         textField.autocorrectionType = .no
         textField.borderStyle = .roundedRect
         textField.autocapitalizationType = .none
+        textField.isSecureTextEntry = true
         textField.adjustsFontForContentSizeCategory = true
         return textField
     }()
     
+    private let signUpButton: UIButton = {
+        var config = UIButton.Configuration.filled()
+        let button = UIButton(type: .system)
+        config.setDynamicTitle("Sign Up", font: .buttonLFont)
+        button.configuration = config
+        button.tintColor = .secondaryColor
+        button.tintAdjustmentMode = .normal
+        return button
+    }()
+
+    
     private func initializeConstraints() {
         guard let superview = superview else { return }
         Vstack.snp.makeConstraints { make in
-            make.edges.equalTo(self)
+            make.top.leading.trailing.equalTo(self)
         }
         emailTextField.snp.makeConstraints { make in
             make.width.equalTo(superview).multipliedBy(Constants.TextField.widthMulti)
@@ -121,6 +167,16 @@ class DetailsInputModule: UIView
         }
         validatePasswordTextField.snp.makeConstraints { make in
             make.size.equalTo(emailTextField)
+        }
+        usernameTextField.snp.makeConstraints { make in
+            make.size.equalTo(emailTextField)
+        }
+        signUpButton.snp.makeConstraints { make in
+            make.height.equalTo(superview).multipliedBy(Constants.Button.buttonLHeightMulti)
+            make.width.equalTo(superview).multipliedBy(Constants.Button.buttonLWidthMulti)
+            make.top.equalTo(Vstack.snp.bottom).offset(Constants.modulePaddingL)
+            make.centerX.equalTo(Vstack)
+            make.bottom.equalTo(self)
         }
     }
 }

@@ -193,14 +193,14 @@
 			path = CustomUIComponents;
 			sourceTree = "<group>";
 		};
-		9F58A44228450E0A00A1509B /* SignUP */ = {
+		9F58A44228450E0A00A1509B /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
 				9F58A44528450E1E00A1509B /* Controller */,
 				9F58A44728450E2700A1509B /* ViewModel */,
 				9F58A44628450E2100A1509B /* View */,
 			);
-			path = SignUP;
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		9F58A44528450E1E00A1509B /* Controller */ = {
@@ -286,7 +286,7 @@
 			children = (
 				9F392BFD284269BC00F706AF /* CustomUIComponents */,
 				9F392BE22842403F00F706AF /* Auth */,
-				9F58A44228450E0A00A1509B /* SignUP */,
+				9F58A44228450E0A00A1509B /* SignUp */,
 				9F76AEAB283A8C1B005E7ED9 /* Home */,
 			);
 			path = Scenes;

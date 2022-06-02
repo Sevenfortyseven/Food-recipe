@@ -7,8 +7,14 @@
 
 import UIKit
 
+public protocol SignUpViewControllerDelegate: AnyObject
+{
+
+}
+
 class SignUpViewController: UIViewController
 {
+    public weak var delegate: SignUpViewControllerDelegate?
     
     public var viewModel: SignUpViewModel
     
@@ -32,11 +38,12 @@ class SignUpViewController: UIViewController
         addSubviews()
         initializeConstraints()
         initializeModules()
+        updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateUI()
+
     }
     
     private func addSubviews() {
@@ -46,6 +53,7 @@ class SignUpViewController: UIViewController
  
     private func initializeModules() {
         detailsInputModule.initialize()
+        addActions()
     }
     
     // MARK: -- UI Configuration --
@@ -54,16 +62,32 @@ class SignUpViewController: UIViewController
         view.backgroundColor = .systemBrown
     }
     
+    // MARK: -- Actions
+    
+    private func addActions() {
+        detailsInputModule.signUpAction = { [unowned self] in
+            viewModel.signUpUser(detailsInputModule.usernameTextField.text!,
+                               detailsInputModule.emailTextField.text!,
+                               detailsInputModule.passwordTextField.text!,
+                               detailsInputModule.validatePasswordTextField.text!)
+        }
+   
+    }
+    
+    
     // MARK: -- UI Elements --
     
     private var titleView: UILabel = {
         let title = UILabel()
         title.text = "Create an account"
-        title.textColor = .black
-        title.font = .preferredFont(forTextStyle: .largeTitle, compatibleWith: .init(legibilityWeight: .bold))
+        title.textColor = .primaryColor
+        title.font = .titleFont
         return title
     }()
+    
 }
+
+    
 
 
 extension SignUpViewController {
@@ -72,11 +96,12 @@ extension SignUpViewController {
     
     private func initializeConstraints() {
         titleView.snp.makeConstraints { make in
-            make.top.equalTo(view).offset(Constants.paddingTop)
             make.centerX.equalTo(view)
+            make.centerY.equalTo(view).multipliedBy(Constants.Title.YoffsetMultiTop)
         }
         detailsInputModule.snp.makeConstraints { make in
             make.center.equalTo(view)
         }
+
     }
 }

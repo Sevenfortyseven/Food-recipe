@@ -10,14 +10,18 @@ import UIKit
 struct Constants
 {
     
-    public static var modulePadding: CGFloat = 20
+    public static var modulePadding: CGFloat = 30
+    public static var modulePaddingL: CGFloat = 60
     public static var paddingTop: CGFloat = 15
     public static var paddingBot: CGFloat = -15
+    public static var itemPadding: CGFloat = 10
+    public static var itemPaddingN: CGFloat = -15
     
     struct Title {
         
         public static var welcomeTitle = "Make Cooking \nGreat Again"
-        public static var YoffsetMulti: CGFloat = 0.5
+        public static var YoffsetMultiMid: CGFloat = 0.5
+        public static var YoffsetMultiTop: CGFloat = 0.3
     }
     
     struct TextField {

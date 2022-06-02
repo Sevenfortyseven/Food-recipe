@@ -38,10 +38,17 @@ extension Coordinator: HomeViewControllerDelegate
 extension Coordinator: AuthViewControllerDelegate
 {
     func signUp() {
-        print("a")
         let targetVM = SignUpViewModel()
         let targetVC = SignUpViewController(viewModel: targetVM)
+        targetVC.delegate = self
         navigationController?.present(targetVC, animated: true)
     }
 
+}
+
+extension Coordinator: SignUpViewControllerDelegate
+{
+    
+    
+    
 }

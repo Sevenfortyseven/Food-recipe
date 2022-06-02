@@ -36,10 +36,11 @@ class SignInModule: UIView
     
     public let signInButton: UIButton = {
         var config = UIButton.Configuration.filled()
-        let button = UIButton()
+        let button = UIButton(type: .system)
         config.setDynamicTitle("Sign In", font: .buttonLFont)
         button.configuration = config
         button.tintColor = .secondaryColor
+        button.tintAdjustmentMode = .normal
         return button
     }()
     
@@ -54,7 +55,7 @@ class SignInModule: UIView
         let stack = UIStackView()
         stack.axis = .vertical
         stack.distribution = .fill
-        stack.spacing = Constants.StackView.spacingM
+        stack.spacing = Constants.itemPadding
         stack.alignment = .fill
         return stack
     }()

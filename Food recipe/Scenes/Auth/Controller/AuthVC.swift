@@ -68,7 +68,7 @@ final class AuthViewController: UIViewController
     
     private func addSubviews() {
         view.addSubview(backgroundView)
-        view.addSubview(welcomeTitle)
+        view.addSubview(titleView)
         view.addSubview(loginModule)
         view.addSubview(signInModule)
         view.addSubview(signUpModule)
@@ -85,6 +85,9 @@ final class AuthViewController: UIViewController
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
     
     private let backgroundView: UIImageView = {
         let view = UIImageView()
@@ -93,7 +96,7 @@ final class AuthViewController: UIViewController
         return view
     }()
     
-    private let welcomeTitle: UILabel = {
+    private let titleView: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
@@ -135,8 +138,8 @@ extension AuthViewController
             make.edges.equalTo(view)
             
         }
-        welcomeTitle.snp.makeConstraints { make in
-            make.centerY.equalTo(view).multipliedBy(Constants.Title.YoffsetMulti)
+        titleView.snp.makeConstraints { make in
+            make.centerY.equalTo(view).multipliedBy(Constants.Title.YoffsetMultiMid)
             make.centerX.equalTo(view)
         }
         loginModule.snp.makeConstraints { make in
