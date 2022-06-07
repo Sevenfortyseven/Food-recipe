@@ -8,7 +8,7 @@
 import Foundation
 
 
-class ObservableObject<T> {
+public class ObservableObject<T> {
     
     public var value: T {
         didSet {

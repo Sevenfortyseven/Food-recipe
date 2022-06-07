@@ -6,12 +6,27 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 
-class SignUpViewModel
+public class SignUpViewModel
 {
     
+    // MARK: - Observable Objects
+    public var emptyFields: ObservableObject<Bool> = ObservableObject(value: false)
+    public var passwordMissmatch: ObservableObject<Bool> = ObservableObject(value: false)
+    public var invalidEmail: ObservableObject<Bool> = ObservableObject(value: false)
+    public var shortUsername: ObservableObject<Bool> = ObservableObject(value: false)
+    public var weakPassword: ObservableObject<Bool> = ObservableObject(value: false)
+    public var signUpError: ObservableObject<Bool> = ObservableObject(value: false)
+    public var signUpSuccess: ObservableObject<Bool> = ObservableObject(value: false)
     
+    // MARK: - Initialization
+    public init() { }
+    
+    deinit {
+        print("signupVM deinitialized")
+    }
     
     /// Validate all user input fields
     /// if there are no errors send sign up request
@@ -22,7 +37,7 @@ class SignUpViewModel
         
         guard username != "", email != "",
               password != "", validatedPassword != "" else {
-            // TODO: Notify
+            emptyFields.value = true
             return
         }
         // Trim input data
@@ -31,20 +46,32 @@ class SignUpViewModel
         let password = password.trimmingCharacters(in: .whitespacesAndNewlines)
         let validatedPassword = validatedPassword.trimmingCharacters(in: .whitespacesAndNewlines)
         
+        guard password.hasMinimumCharacters() else {
+            weakPassword.value = true
+            return
+        }
         guard password == validatedPassword else {
-            // TODO: Notify
+            passwordMissmatch.value = true
             return
         }
         guard email.isValidEmail() else {
-            // TODO: Notify
+            invalidEmail.value = true
             return
         }
         guard username.hasMinimumCharacters() else {
-            // TODO: Notify
+            shortUsername.value = true
             return
         }
         
-        // TODO: Send Request !! 
+        
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            guard error == nil,
+                  authResult != nil else {
+                self.signUpError.value = true
+                return
+            }
+            self.signUpSuccess.value = true
+        }
     }
     
 }

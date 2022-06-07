@@ -9,7 +9,7 @@ import UIKit
 
 public protocol SignUpViewControllerDelegate: AnyObject
 {
-
+    func onSignUpSuccess()
 }
 
 class SignUpViewController: UIViewController
@@ -32,6 +32,9 @@ class SignUpViewController: UIViewController
         fatalError("")
     }
     
+    deinit {
+        print("SignUpVC deinitialized")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,7 @@ class SignUpViewController: UIViewController
         initializeConstraints()
         initializeModules()
         updateUI()
+        startListening()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +53,48 @@ class SignUpViewController: UIViewController
     private func addSubviews() {
         view.addSubview(titleView)
         view.addSubview(detailsInputModule)
+    }
+    
+    // Bind View to VM
+    private func startListening() {
+        viewModel.shortUsername.bind { [unowned self] shortUsername in
+            if shortUsername {
+                showAlert(.shortUsername)
+            }
+        }
+        viewModel.weakPassword.bind { [unowned self] weakPassword in
+            if weakPassword {
+                showAlert(.weakPassword)
+            }
+        }
+        viewModel.emptyFields.bind { [unowned self] emptyFields in
+            if emptyFields {
+                showAlert(.emptyFields)
+            }
+        }
+        viewModel.invalidEmail.bind { [unowned self] invalidEmail in
+            if invalidEmail {
+                showAlert(.invalidEmail)
+            }
+        }
+        viewModel.passwordMissmatch.bind { [unowned self] passwordMissmatch in
+            if passwordMissmatch {
+                showAlert(.passwordMismatch)
+            }
+        }
+        viewModel.signUpError.bind { [unowned self] signUpError in
+            if signUpError {
+                showAlert(.signUpError)
+            }
+        }
+        viewModel.signUpSuccess.bind { [unowned self] success in
+            if success {
+                showAlert(.signUpSuccess, alertHandler:  { _ in
+                    self.delegate?.onSignUpSuccess()
+                })
+            }
+        }
+        
     }
  
     private func initializeModules() {

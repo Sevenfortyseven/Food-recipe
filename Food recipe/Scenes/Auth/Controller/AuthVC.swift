@@ -12,6 +12,7 @@ import SnapKit
 protocol AuthViewControllerDelegate: AnyObject
 {
     func signUp()
+    func signIn()
 }
 
 final class AuthViewController: UIViewController
@@ -23,8 +24,8 @@ final class AuthViewController: UIViewController
     private lazy var loginModule = LoginInputModule()
     private lazy var signInModule = SignInModule()
     private lazy var signUpModule = SignUpModule()
-    // MARK: -- Initialization --
     
+    // MARK: -- Initialization --
     
     init(viewModel: AuthViewModel) {
         self.viewModel = viewModel
@@ -48,6 +49,16 @@ final class AuthViewController: UIViewController
         viewModel.invalidEmail.bind { [unowned self] invalidEmail in
             if invalidEmail == true {
                 showAlert(.invalidEmail)
+            }
+        }
+        viewModel.wrongDetails.bind { [unowned self] wrongDetails in
+            if wrongDetails {
+                showAlert(.wrongDetails)
+            }
+        }
+        viewModel.signInSuccess.bind { [unowned self] signInSuccess  in
+            if signInSuccess {
+                delegate?.signIn()
             }
         }
     }
@@ -107,17 +118,13 @@ final class AuthViewController: UIViewController
         return label
     }()
     
+    
     // MARK: -- Action and Targets --
     
-    
-    
-    
     private func addActions() {
-        loginModule.checkbox.checkboxAction = { [unowned self] in
-            //            let vm = HomeViewModel()
-            //            let targetVC = HomeViewController(viewModel: vm)
-            //            navigationController?.setViewControllers([targetVC], animated: true)
-        }
+//        loginModule.checkbox.checkboxAction = { [unowned self] in
+           // TODO: Implement save username/ checkbox action
+//        }
         signInModule.signInAction = { [unowned self] in
             viewModel.validate(loginModule.emailTextField.text!, loginModule.passwordTextField.text!)
         }
